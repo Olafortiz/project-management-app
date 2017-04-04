@@ -1,6 +1,7 @@
 class Tenant < ApplicationRecord
 
    acts_as_universal_and_determines_tenant
+  has_many :projects, dependent: :destroy
   has_many :members, dependent: :destroy
   validates_presence_of :name
   validates_uniqueness_of :name
@@ -45,5 +46,8 @@ class Tenant < ApplicationRecord
       #
     end
 
+   def can_create_projects?
+     (plan == 'free' && projects.count < 1) || (plan == 'premium')
+   end
    
 end
