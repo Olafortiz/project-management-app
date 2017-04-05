@@ -30,10 +30,8 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       if @project.save
         format.html { redirect_to root_url, notice: 'Project was successfully created.' }
-        
       else
         format.html { render :new }
-       
       end
     end
   end
@@ -44,10 +42,8 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to root_url, notice: 'Project was successfully updated.' }
-        
       else
         format.html { render :edit }
-       
       end
     end
   end

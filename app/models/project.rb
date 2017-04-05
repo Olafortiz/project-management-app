@@ -15,7 +15,7 @@ class Project < ApplicationRecord
       if tenant.plan == 'premium'
         tenant.projects
       else
-         tenant.projects.order(:id).limit(1)
+        tenant.projects.order(:id).limit(1)
       end
   end
     
