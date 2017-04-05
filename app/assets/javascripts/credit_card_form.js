@@ -9,7 +9,7 @@ function GetURLParameter(sParam) {
   if (sParameterName[0] == sParam)
  {
    return sParameterName[1];
-  }
+  } 
  }
 };
 
@@ -20,6 +20,17 @@ $(document).ready(function (){
     
 
 // function to handle the submit of the form and intercept the default event
+
+ submitHandler = function (event) {
+   var $form = $(event.target);
+   $form.find("input[type=submit]").prop("disabled", true);
+   if(Stripe){
+      Stripe.card.createToken($form, stripeResponseHandler);
+   } else {
+       show_error("Failed to load credit card processing functionality. Please reload the page")
+   }
+   return false;
+};
 
 
 // initiate submit handler listener for any form with a class cc_from
@@ -63,7 +74,7 @@ $(document).ready(function (){
         $form = $('.cc_form');
         
         if (response.error) {
-           console.log(response.error.message) ;
+           console.log(response.error.message);
            show_error(response.error.message);
            $form.find("input[type=submit]").prop("disabled", false);
         } else {
