@@ -2,30 +2,30 @@
 padding: 0 !important ;
 padding-left: 5px;
 padding-top: 15px !important;
-text-align: center;
+text-align: left;
 
 a {
 color: #fff !important;
 margin: 0 !important;
-padding: 5px!important;
+padding: 10px!important;
  }
 
 a:hover, a:focus {
-color: #000 !important;
+color: #cdc5bf !important;
   }
 }
 
 .nav.navbar-right {
-padding-bottom: 10px;
+padding-bottom: 30px;
 padding-top: 5px;
 }
 
 .nav.navbar-nav {
 
 .navbar-link {
-border-radius: 10px;
+border-radius: 1px;
 color: #fff;
-margin-top: 15px;
+margin-top: 20px;
 padding: 8px;
  }
 
@@ -68,15 +68,15 @@ padding-left: 15px;
 }
 
 .jumbotron {
-background-image: asset-url('working.jpg');
-background-size: cover;
+background-image: asset-url('re_teamwork_free.png');
+background-size: 100%;
 color: #fff;
 font-family: 'Lucida' !important;
 font-stretch: expanded;
 padding-top: 80px;
 padding-bottom: 80px;
-margin-left: -50px;
-margin-right: -50px;
+margin-left: 10px;
+margin-right: 10px;
 text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 text-align: center;
 
@@ -148,7 +148,7 @@ padding-left: 0;
 }
 
 .navbar.navbar-static-top {
-background: #000;
+background: #4d4d00;
 color: #fff !important;
-padding-bottom: 5px;
+padding-bottom: 0px;
 }

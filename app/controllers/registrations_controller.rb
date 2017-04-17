@@ -15,7 +15,7 @@ def create
     # have a working copy of the params in case Tenant callbacks
     # make any changes
   tenant_params = sign_up_params_tenant
-  user_params   = sign_up_params_user.merge({ is_admin: true })
+  user_params = sign_up_params_user.merge({ is_admin: true })
   coupon_params = sign_up_params_coupon
 
   sign_out_session!
@@ -184,5 +184,5 @@ end   # def create
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
 
-  end   # class Registrations
+end   # class Registrations
     
